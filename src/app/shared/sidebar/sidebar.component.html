@@ -1,0 +1,14 @@
+<div class="bg-dark border-right p-3" id="sidebar">
+    <h3 class="text-light">
+        Gif-App
+    </h3>
+    <hr class="text-white">
+    <div class="list-group list-reset">
+        <!--| : hace referencia un pipe, el cual nos permite modificar la entrada de un texto a un formato de 
+        mayusculas y minusculas, manipulan y tranforman solo en el template, no hace modificaciones a la data.
+        titlecase: para mayusculas primera letra y minusculas las siguientes-->
+        <a *ngFor="let item of historial" href="#" class="List-group-item List-group-item-action"
+            (click)="buscar( item )">{{ item | titlecase
+            }}</a>
+    </div>
+</div>
